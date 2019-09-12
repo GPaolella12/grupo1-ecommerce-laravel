@@ -68,9 +68,8 @@ class ProductsController extends Controller
 
     public function admin(){
         
-        $products = Product::with("brand", "category")->get();
+        $products = Product::with("brand", "category")->paginate(30);
         
-
         return view("adminProducts", compact("products"));
     }
 
@@ -102,7 +101,9 @@ class ProductsController extends Controller
         $product = Product::find($id);
         $product->delete();
 
-        redirect('/productos/admin');
+        $products = Product::paginate(30);
+
+        return view('adminProducts', compact('products'));
     }
 
     public function cart(){
