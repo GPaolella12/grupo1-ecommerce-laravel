@@ -1,0 +1,41 @@
+header ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header li {
+  margin-right: 10px;
+}
+
+ul.links {
+  margin-top: 20px;
+}
+
+header ul img {
+  width: 40px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 8px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header form {
+  display: flex;
+  margin-top: 10px;
+}
+
+header form input {
+  width: 100px;
+  margin-right: 10px;
+}
+
+header form button {
+  height:36px;
+}
